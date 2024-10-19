@@ -1,0 +1,33 @@
+{
+  "name": "inkspire",
+  "version": "1.0.0",
+  "description": "A whiteboard application for note-making",
+  "author": "Your Name",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.inkspire",
+    "productName": "Inkspire",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.0.1",
+    "electron-builder": "^25.1.8"
+  }
+}
